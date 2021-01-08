@@ -85,6 +85,10 @@ async function downloadCSV(url: string): Promise<ResolvAbles> {
     const name = path.basename(url, ".csv");
     const downloadPath = process.cwd() + "/downloads/";
 
+    if (!fs.existsSync(downloadPath)) {
+      fs.mkdirSync(downloadPath);
+    }
+
     console.log(downloadPath);
     const _path = path.resolve(downloadPath + fileName);
     const file = fs.createWriteStream(_path);
