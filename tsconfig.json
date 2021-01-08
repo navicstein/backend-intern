@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "target": "es2018",
+    "lib": ["esnext"],
+    "module": "CommonJS",
+    "strict": false,
+    "alwaysStrict": false,
+    "outDir": "build",
+    "rootDir": "src"
+  },
+  "include": ["src/*"]
+}
